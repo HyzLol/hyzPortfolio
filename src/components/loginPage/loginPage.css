@@ -1,0 +1,27 @@
+#loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+#loginPage #icon {
+    aspect-ratio: 1/1;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    color: rgb(35, 35, 35);
+    font-size: 10rem;
+}
+
+#loginPage #name {
+    font-size: 3rem;
+}
+
+#loginPage button {
+    font-size: 1.4rem;
+}
