@@ -1,4 +1,4 @@
-import { component$, useStore, useStylesScoped$, useTask$, useVisibleTask$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import TaskbarStyle from "./taskbar.css?inline"
 import appData from "~/constants";
 
