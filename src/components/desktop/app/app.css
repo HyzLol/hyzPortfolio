@@ -1,0 +1,22 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    aspect-ratio: 1/1;
+    gap: 1vh;
+    transition: .13s;
+}
+
+.app .app-icon iconify-icon {
+    font-size: 3.5rem;
+}
+
+.app span {
+    font-size: .8rem;
+}
+
+.app:hover {
+    filter: brightness(0.5);
+}

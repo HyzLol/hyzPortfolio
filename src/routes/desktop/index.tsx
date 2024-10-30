@@ -4,7 +4,7 @@ import { Desktop } from '~/components/desktop/desktop';
 export default component$(() => {
   return (
     <div id = "wrapper">
-        <Desktop/>
+        <Desktop></Desktop>
     </div>
   );
 });
