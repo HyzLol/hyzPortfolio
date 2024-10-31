@@ -2,6 +2,7 @@ import { $, component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
 import DesktopStyle from "./desktop.css?inline"
 import { Taskbar } from "./taskbar/taskbar";
 import { App } from "./app/app";
+import { AppWindow } from "./appWindow/appWindow";
 
 
 const apps = [
@@ -37,6 +38,7 @@ export const Desktop = component$(() => {
                         <App type = {type} key = {id} onOpen$={onOpen} onClose$={onClose}></App>
                     ))
                 }
+                <AppWindow></AppWindow>
             </div>
             <Taskbar apps = {opened.apps}></Taskbar>
         </>

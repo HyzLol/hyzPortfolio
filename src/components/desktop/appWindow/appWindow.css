@@ -1,0 +1,89 @@
+.app-window {
+    aspect-ratio: 16/9;
+    width: 60vw;
+    background: rgb(23, 23, 23);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: .3vw;
+    border: 1px solid rgba(255, 255, 255, 0.413);
+    animation: scale-up-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    /* cursor: pointer; */
+    overflow: hidden;
+
+    /* overflow: hidden; */
+}
+
+.app-window:hover::before {
+    opacity: 1;
+}
+
+.app-window::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    content: "";
+    z-index: 3;
+    background: radial-gradient(
+        1000px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.01),
+        transparent 80%
+    );
+    opacity: 0;
+    transition: opacity .4s;
+    /* cursor: pointer; */
+}
+
+.app-window header {
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 0vw;
+    width: 100%;
+    z-index: 5;
+    user-select: none;
+}
+
+.app-window header .app-window-icon {
+    aspect-ratio: 1/1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-window header .app-window-icon iconify-icon {
+    font-size: 1.5rem
+}
+
+.app-window header .app-window-title {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+}
+
+.app-window header .app-window-close {
+    position: absolute;
+    top:0;
+    right: 0;
+    display: flex;
+    background: transparent;
+    width: 3vw;
+    height: 100%;
+    border-bottom-left-radius: .3vw;
+    justify-content: center;
+    align-items: center;
+    transition: .13s;
+}
+
+.app-window header .app-window-close:hover {
+    background: white;
+    color: black;
+    z-index: 5;
+}
