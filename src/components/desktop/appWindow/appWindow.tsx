@@ -40,7 +40,6 @@ export const AppWindow = component$(() => {
 
     return (
         <div class = "app-window" draggable onMouseMove$={(e) => {
-            // if (!e.target.classList.contains("app-window")) return 
             const target = e.target as HTMLElement
             if (target == null) return 
             console.log(target.classList)
