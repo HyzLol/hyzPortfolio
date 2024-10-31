@@ -1,6 +1,6 @@
 import { $, component$, useStore, useStylesScoped$ } from "@builder.io/qwik";
 import AppWindowStyle from "./appWindow.css?inline"
-import appData from "~/constants";
+// import appData from "~/constants";
 
 interface Element {
     pos1: number;
@@ -9,7 +9,7 @@ interface Element {
     pos4: number;
     element: HTMLElement | null;
 }
-export const AppWindow = component$((props) => {
+export const AppWindow = component$(() => {
     useStylesScoped$(AppWindowStyle)
     const position = useStore<Element>({
         pos1: 0,
