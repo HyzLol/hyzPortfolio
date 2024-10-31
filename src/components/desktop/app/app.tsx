@@ -22,7 +22,7 @@ export const App = component$<AppProps>((props) => {
     useStylesScoped$(AppStyle)
     return (
         <div class = "app" onClick$={() => {
-            props.onOpen$(type)
+            props.onOpen$(props.type)
         }}>
             <div class = "app-icon">
                 <iconify-icon icon = {icon}></iconify-icon>

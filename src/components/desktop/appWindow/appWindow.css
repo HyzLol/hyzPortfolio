@@ -15,6 +15,10 @@
     /* overflow: hidden; */
 }
 
+.app-window.onHide {
+    animation: scale-down-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
 .app-window:hover::before {
     opacity: 1;
 }
@@ -27,7 +31,7 @@
     width: 100%;
     border-radius: inherit;
     content: "";
-    z-index: 3;
+    z-index: 10;
     background: radial-gradient(
         1000px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.01),
         transparent 80%
@@ -35,6 +39,7 @@
     opacity: 0;
     transition: opacity .4s;
     /* cursor: pointer; */
+    pointer-events: none;
 }
 
 .app-window header {
@@ -86,4 +91,38 @@
     background: white;
     color: black;
     z-index: 5;
+}
+
+.app-window section {
+    height: 90%;
+    position: absolute;
+    top:10%;
+    left:0;
+    width: 100%;
+    z-index: 5;
+}
+
+.app-window .about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+}
+
+.app-window .about-title, .app-window .about-desc {
+    width: 95%;
+}
+
+.app-window .about-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.app-window .about-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.553);
 }

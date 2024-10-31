@@ -7,7 +7,6 @@ import { AppWindow } from "./appWindow/appWindow";
 
 const apps = [
     "about",
-    "experience",
     "projects",
     "contact",
     "terminal"
@@ -38,7 +37,11 @@ export const Desktop = component$(() => {
                         <App type = {type} key = {id} onOpen$={onOpen} onClose$={onClose}></App>
                     ))
                 }
-                <AppWindow></AppWindow>
+                {
+                    opened.apps.map((type: any,id: any) => (
+                        <AppWindow type = {type} key = {id} onClose$={onClose}></AppWindow>
+                    ))
+                }
             </div>
             <Taskbar apps = {opened.apps}></Taskbar>
         </>

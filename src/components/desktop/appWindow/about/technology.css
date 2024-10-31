@@ -1,0 +1,55 @@
+.technologies .technologies-title {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.technologies  {
+    width: 95%;
+    margin-top: 5vh;
+}
+
+.technologies section {
+    margin-top: 4vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1vw;
+}
+
+.technologies section .technology {
+    display: flex;  
+    align-items: center;
+    gap: .5vw;
+    height: 7vh;
+    width: 100%;
+    background: rgb(33, 33, 33);
+    padding-block: 1vh;
+    border-radius: .2vw;
+    border: 1px solid rgba(97, 97, 97, 0.585);
+}
+
+.technologies section .technology .icon {
+    aspect-ratio: 1/1;
+    border-radius:50%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.111);
+    margin-left: .5vw;
+}
+
+.technologies section .technology .icon img{
+    aspect-ratio: 1/1;
+    height: 50%;
+}
+
+.technologies .technology .technology-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.technologies .technology .technology-desc {
+    font-size: .7rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.523);
+}

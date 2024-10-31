@@ -20,7 +20,7 @@ export const Taskbar = component$<TaskbarProps>((props) => {
                         const key = type as keyof typeof appData
                         return (
                             <div key = {index} onClick$={() => {
-                                // closeApp(type)
+                                
                             }}>
                                 <iconify-icon icon = {appData[key].icon}></iconify-icon>
                             </div>
