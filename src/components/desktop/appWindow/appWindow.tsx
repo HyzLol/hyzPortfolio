@@ -42,16 +42,17 @@ export const AppWindow = component$((props) => {
         <div class = "app-window" draggable onMouseMove$={(e) => {
             // if (!e.target.classList.contains("app-window")) return 
             const target = e.target as HTMLElement
-
-            console.log(e.target.classList)
+            if (target == null) return 
+            console.log(target.classList)
             const rect = target.getBoundingClientRect(), x = e.clientX - rect.left, y = e.clientY - rect.top    
             
             target.style.setProperty("--mouse-x", `${x}px`)
             target.style.setProperty("--mouse-y", `${y}px`)
         }} onMouseDown$={(e) => {
             e.preventDefault();
-            if (!e.target.classList.contains("app-window")) {
-                const el = e.target.parentElement
+            const target = e.target as HTMLElement
+            if (!target.classList.contains("app-window")) {
+                const el = target.parentElement as HTMLElement
                 if (!el.classList.contains("app-window")) return 
 
                 position.element = el as HTMLElement
